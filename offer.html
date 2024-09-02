@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - Offers</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .offers-section {
+            padding: 60px 0;
+        }
+
+        .offers-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .offer-item {
+            margin-bottom: 30px;
+        }
+
+        .offer-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .offer-item-title {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .offer-item-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .offer-item-discount {
+            font-size: 1.3rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ABC Restaurant</a>
+        <img src="abclogo.png" alt="ABC Restaurant Logo" style="width: 80px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="offer.html">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <a class="dropdown-item" href="adminlogin.html">Admin Login</a>
+                        <a class="dropdown-item" href="stafflogin.html">Staff Login</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Offers Section -->
+    <section class="offers-section">
+        <div class="container">
+            <h2 class="offers-title">Special Offers</h2>
+            <div class="row">
+                <!-- Offer 1: Weekend Special -->
+                <div class="col-md-4">
+                    <div class="offer-item">
+                        <img src="dine-in meals.jpg" alt="Weekend Special">
+                        <h3 class="offer-item-title">Weekend Special</h3>
+                        <p class="offer-item-description">
+                            Enjoy a 20% discount on all dine-in meals during weekends. Treat yourself to our signature dishes at a special price!
+                        </p>
+                        <p class="offer-item-discount">20% OFF</p>
+                    </div>
+                </div>
+                <!-- Offer 2: Family Combo -->
+                <div class="col-md-4">
+                    <div class="offer-item">
+                        <img src="4 main courses, 2 appetizers, and a dessert platter.jpg" alt="Family Combo">
+                        <h3 class="offer-item-title">Family Combo</h3>
+                        <p class="offer-item-description">
+                            Get a special family combo that includes 4 main courses, 2 appetizers, and a dessert platter at an unbeatable price.
+                        </p>
+                        <p class="offer-item-discount">Save LKR 5000</p>
+                    </div>
+                </div>
+                <!-- Offer 3: Happy Hour -->
+                <div class="col-md-4">
+                    <div class="offer-item">
+                        <img src="drinks and appetizers..jpg" alt="Happy Hour">
+                        <h3 class="offer-item-title">Happy Hour</h3>
+                        <p class="offer-item-description">
+                            Join us for Happy Hour every weekday from 4 PM to 7 PM. Enjoy half-price drinks and appetizers.
+                        </p>
+                        <p class="offer-item-discount">50% OFF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        &copy; 2024 ABC Restaurant. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
