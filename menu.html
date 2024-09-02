@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .menu-section {
+            padding: 60px 0;
+        }
+
+        .menu-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .menu-category-title {
+            font-size: 2rem;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #555;
+        }
+
+        .menu-item {
+            margin-bottom: 30px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item-description {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .menu-item-price {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ABC Restaurant</a>
+        <img src="abclogo.png" alt="ABC Restaurant Logo" style="width: 80px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="offer.html">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="adminlogin.html">Admin Login</a>
+                        <a class="dropdown-item" href="stafflogin.html">Staff Login</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="menu-title">Our Menu</h2>
+
+            <!-- Appetizers -->
+            <h3 class="menu-category-title">Appetizers</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Crispy Spring Rolls with Sweet Chili Sauce.jpg" alt="Appetizer 1">
+                        <div class="menu-item-description">Crispy Spring Rolls with Sweet Chili Sauce</div>
+                        <div class="menu-item-price">LKR 3500</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Stuffed Mushrooms with Garlic and Herbs.jpg" alt="Appetizer 2">
+                        <div class="menu-item-description">Stuffed Mushrooms with Garlic and Herbs</div>
+                        <div class="menu-item-price">LKR 4000</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Bruschetta with Tomato and Basil.jpg" alt="Appetizer 3">
+                        <div class="menu-item-description">Bruschetta with Tomato and Basil</div>
+                        <div class="menu-item-price">LKR 4500</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <h3 class="menu-category-title">Main Courses</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Grilled Salmon with Lemon Butter Sauce.jpg" alt="Main Course 1">
+                        <div class="menu-item-description">Grilled Salmon with Lemon Butter Sauce</div>
+                        <div class="menu-item-price">LKR 3500</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Roast Chicken with Garlic and Rosemary.jpg" alt="Main Course 2">
+                        <div class="menu-item-description">Roast Chicken with Garlic and Rosemary</div>
+                        <div class="menu-item-price">LKR 4800</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Vegetable Stir-Fry with Tofu.jpg" alt="Main Course 3">
+                        <div class="menu-item-description">Vegetable Stir-Fry with Tofu</div>
+                        <div class="menu-item-price">LKR 3500</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <h3 class="menu-category-title">Desserts</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Chocolate Lava Cake with Vanilla Ice Cream.jpg" alt="Dessert 1">
+                        <div class="menu-item-description">Chocolate Lava Cake with Vanilla Ice Cream</div>
+                        <div class="menu-item-price">LKR 4000</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Classic Tiramisu.jpg" alt="Dessert 2">
+                        <div class="menu-item-description">Classic Tiramisu</div>
+                        <div class="menu-item-price">LKR 3000</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="menu-item">
+                        <img src="Fresh Fruit Tart with Cream.jpg" alt="Dessert 3">
+                        <div class="menu-item-description">Fresh Fruit Tart with Cream</div>
+                        <div class="menu-item-price">LKR 5000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        &copy; 2024 ABC Restaurant. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
