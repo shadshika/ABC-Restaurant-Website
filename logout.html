@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - Logout</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .logout-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .logout-card {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .logout-card img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .logout-title {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .btn-login {
+            background-color: blue;
+            color: #fff;
+        }
+
+        .btn-login:hover {
+            background-color: blue;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+
+        .message a {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logout Section -->
+    <section class="logout-section">
+        <div class="logout-card">
+            <img src="abclogo.png" alt="ABC Restaurant Logo">
+            <h2 class="logout-title">You Have Been Logged Out</h2>
+            <p>You have successfully logged out of your account.</p>
+            
+            <!-- Message -->
+            <div class="message">
+                <p>Don't have an account? <a href="register.html">Create one here</a></p>
+                <p>Already have an account? <a href="adminlogin.html">Login here</a></p>
+                <p>Already have an account? <a href="stafflogin.html">Login here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
