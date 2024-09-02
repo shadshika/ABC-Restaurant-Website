@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .services-section {
+            padding: 60px 0;
+        }
+
+        .services-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .service-item, .facility-item {
+            margin-bottom: 30px;
+        }
+
+        .service-item img, .facility-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .service-item-title, .facility-item-title {
+            font-size: 1.5rem;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .service-item-description, .facility-item-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ABC Restaurant</a>
+        <img src="abclogo.png" alt="ABC Restaurant Logo" style="width: 80px;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="offer.html">Offers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="adminlogin.html">Admin Login</a>
+                        <a class="dropdown-item" href="stafflogin.html">Staff Login</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="services-title">Our Services</h2>
+            <div class="row">
+                <!-- Service 1: Fine Dining -->
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="Fine Dining1.jpg" alt="Fine Dining">
+                        <h3 class="service-item-title">Fine Dining</h3>
+                        <p class="service-item-description">
+                            Experience gourmet meals in an elegant and sophisticated setting. Our fine dining service offers a curated menu that highlights the best of our culinary expertise.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 2: Catering -->
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="Catering.jpg" alt="Catering">
+                        <h3 class="service-item-title">Catering</h3>
+                        <p class="service-item-description">
+                            Let us bring the flavors of ABC Restaurant to your events. Our catering services are perfect for weddings, corporate events, and special occasions.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 3: Delivery -->
+                <div class="col-md-4">
+                    <div class="service-item">
+                        <img src="Delivery.png" alt="Delivery">
+                        <h3 class="service-item-title">Delivery</h3>
+                        <p class="service-item-description">
+                            Enjoy your favorite dishes from ABC Restaurant in the comfort of your home. Our reliable delivery service ensures that your meals arrive hot and fresh.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities Section -->
+            <h2 class="services-title">Our Facilities</h2>
+            <div class="row">
+                <!-- Facility 1: Private Dining Rooms -->
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <img src="Private Dining Rooms.jpg" alt="Private Dining Rooms">
+                        <h3 class="facility-item-title">Private Dining Rooms</h3>
+                        <p class="facility-item-description">
+                            Enjoy an exclusive dining experience in our private rooms, perfect for intimate gatherings and special celebrations.
+                        </p>
+                    </div>
+                </div>
+                <!-- Facility 2: Outdoor Seating -->
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <img src="Outdoor Seating.jpg" alt="Outdoor Seating">
+                        <h3 class="facility-item-title">Outdoor Seating</h3>
+                        <p class="facility-item-description">
+                            Relax and dine in our beautiful outdoor seating area, surrounded by a serene atmosphere and vibrant scenery.
+                        </p>
+                    </div>
+                </div>
+                <!-- Facility 3: Kids Play Area -->
+                <div class="col-md-4">
+                    <div class="facility-item">
+                        <img src="Kids Play Area.jpg" alt="Kids Play Area" style="height: 230px; width: auto;">
+
+                        <h3 class="facility-item-title">Kids Play Area</h3>
+                        <p class="facility-item-description">
+                            Let your kids have fun in our safe and enjoyable play area while you enjoy your meal. It's perfect for families!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center p-3">
+        &copy; 2024 ABC Restaurant. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
