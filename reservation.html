@@ -8,8 +8,18 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Custom CSS */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand img {
+            width: 80px;
+        }
+
         .reservation-section {
             padding: 60px 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .reservation-title {
@@ -24,22 +34,38 @@
             margin: 0 auto;
         }
 
-        .form-group label {
+        .reservation-form label {
             font-weight: bold;
+            margin-top: 10px;
         }
 
-        .form-group input,
-        .form-group select {
+        .reservation-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
             border-radius: 5px;
+            margin-bottom: 20px;
         }
 
         .btn-submit {
             background-color: maroon;
             color: #fff;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .btn-submit:hover {
-            background-color: maroon;
+            background-color: darkred;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
         }
     </style>
 </head>
@@ -47,7 +73,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="abclogo.png" alt="ABC Restaurant Logo" style="width: 80px;">
+            <img src="abclogo.png" alt="ABC Restaurant Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -75,7 +101,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="gallery.html">Gallery</a>
                 </li>
-                
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Login
@@ -99,55 +124,24 @@
     <section class="reservation-section">
         <div class="container">
             <h2 class="reservation-title">Make a Reservation</h2>
-            <form class="reservation-form" action="reservation.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
-                </div>
-                <div class="form-group">
-                    <label for="date">Reservation Date</label>
-                    <input type="date" class="form-control" id="date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="time">Reservation Time</label>
-                    <input type="time" class="form-control" id="time" name="time" required>
-                </div>
-                <div class="form-group">
-                    <label for="people">Number of People</label>
-                    <select class="form-control" id="people" name="people" required>
-                        <option value="">Select number of people</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="more">More than 10</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="special-request">Special Requests</label>
-                    <textarea class="form-control" id="special-request" name="special-request" rows="3" placeholder="Any special requests or dietary restrictions?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-submit">Submit Reservation</button>
+            <form class="reservation-form" action="reservation.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+                <label for="people">Number of People:</label>
+                <input type="number" id="people" name="people" placeholder="Enter the number of people" required>
+                <button type="submit" class="btn-submit">Submit</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3">
+    <footer class="footer text-center">
         &copy; 2024 ABC Restaurant. All Rights Reserved.
     </footer>
 
