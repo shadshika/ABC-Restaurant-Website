@@ -65,18 +65,18 @@
             <h2 class="login-title">Staff Login</h2>
             
             <!-- Staff Login Form -->
-            <form action="stafflogin.php" method="post">
-                <input type="hidden" name="role" value="staff">
+            <form method="POST" action="stafflogin.php">
                 <div class="form-group">
                     <label for="usernameh">Username</label>
-                    <input type="text"class="form-control"  name="usernameh" id="usernameh" required>
+                    <input type="text" class="form-control" id="usernameh" name="usernameh" placeholder="Enter your username" required>
                 </div>
                 <div class="form-group">
                     <label for="passwordh">Password</label>
-                    <input type="password"class="form-control"  name="passwordh" id="passwordh" required>
+                    <input type="password" class="form-control" id="passwordh" name="passwordh" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="btn btn-login btn-block">Login as Admin</button>
+                <button type="submit" class="btn btn-login btn-block">Login as Staff</button>
             </form>
+            
         </div>
     </section>
 
