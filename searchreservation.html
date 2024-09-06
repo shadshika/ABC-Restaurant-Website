@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - searchreservation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+.reservation-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.reservation-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.reservation-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn-submit {
+    background-color: maroon;
+    color: #fff;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-submit:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+#click_here {
+    margin-top: 20px;
+}
+
+#click_here a {
+    color: maroon;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 156px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="abclogo.png" alt="ABC Restaurant Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="offer.html">Offers</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="reservation.html">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Login
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <a class="dropdown-item" href="adminlogin.html">Admin Login</a>
+                        <a class="dropdown-item" href="stafflogin.html">Staff Login</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section">
+        <div class="container">
+            <h2 class="reservation-title">Search Reservation</h2>
+            <form method="post" action="searchreservation.php" class="reservation-form">
+                <div class="form-group">
+                    <label for="name">Search NO:</label>
+                    <input type="text" class="form-control" name="no" placeholder="Search no" required>
+                </div> 
+                <center>
+                    <button type="submit" class="btn btn-lg btn-submit" name="submit">Search</button>
+
+                </center>
+                <br>
+                <div id="click_here">
+                    <a href="admin_panel.html"><center>Back to Admin Panel</center></a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        &copy; 2024 ABC Restaurant. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
