@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - Staff Panel</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /*  styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F9F9F9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h3 {
+            color: darkblue;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color:  maroon;
+            width: 230px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            color: #FFF;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: #ECF0F1;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+        }
+
+        .sidebar ul li a {
+            color: #BDC3C7;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: black;
+            color: #ECF0F1;
+            border-radius: 4px;
+        }
+
+        /* Dropdown styles */
+        .dropdown-content {
+            display: none;
+            list-style-type: none;
+            padding-left: 20px;
+            background-color: maroon;
+            border-radius: 4px;
+        }
+
+        .dropdown-content li a {
+            font-size: 16px;
+            color: #BDC3C7;
+        }
+
+        .dropdown-content li a:hover {
+            color: #ECF0F1;
+        }
+
+        /* Main content */
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            background-color:#f0f0f0;
+            padding: 10px 20px;
+            color: #FFF;
+            box-shadow: darkblue;
+            justify-content: space-between;
+        }
+
+        .header .logo {
+            height: 50px;
+        }
+
+        .header h1 {
+            margin: 0;
+            flex-grow: 1;
+            color: black;
+        }
+
+        .header .logout {
+            background-color: maroon;
+            color: #FFF;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .header .logout:hover {
+            background-color: maroon;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: orange;
+            color: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #FFF;
+        }
+
+        .card i {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .card .number {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .card .label {
+            font-size: 18px;
+        }
+
+        .card:hover {
+            background-color: darkorange;
+        }
+
+        .chart-container {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>ABC Restaurant</h2>
+        <img src="abclogo.png" alt="ABC Reservation Logo" class="logo" style="width: 100px; height: auto; display: block; margin: 0 auto;">
+        <ul>
+            
+            <!-- Manage Reservation Dropdown -->
+            <li>
+                <a href="#" onclick="toggleDropdown('reservationDropdown')">
+                    <i class="fas fa-calendar-alt"></i> Manage Reservation
+                </a>
+                <ul id="reservationDropdown" class="dropdown-content">
+                    <li>
+                        <a href="reservation.html">
+                            <i class="fas fa-calendar-plus"></i>&nbsp; Add Reservation
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="updatereservation.html">
+                            <i class="fas fa-calendar-edit"></i>&nbsp; Update Reservation
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="deletereservation.html">
+                            <i class="fas fa-trash"></i>&nbsp; Delete Reservation
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="searchreservation.html">
+                            <i class="fas fa-search"></i>&nbsp; Search Reservation
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="viewsearch.php">
+                            <i class="fas fa-calendar-check"></i>&nbsp; View Reservation
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+
+            <!-- Manage Facility Dropdown -->
+            <li>
+                <a href="#" onclick="toggleDropdown('facilityDropdown')">
+                    <i class="fas fa-tools"></i> Manage Facility
+                </a>
+                
+                <ul id="facilityDropdown" class="dropdown-content">
+                    <li>
+                        <a href="add facility.html">
+                            <i class="fas fa-plus-square"></i>&nbsp; Add Facility
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="update facility.html">
+                            <i class="fas fa-wrench"></i>&nbsp; Update Facility
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="delete facility.html">
+                            <i class="fas fa-trash"></i>&nbsp; Delete Facility
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="search facility.html">
+                            <i class="fas fa-search"></i>&nbsp; Search Facility
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="viewfacility.php">
+                            <i class="fas fa-building"></i>&nbsp; View Facility
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+<!-- Manage service Dropdown -->
+<li>
+    <a href="#" onclick="toggleDropdown('serviceDropdown')">
+        <i class="fas fa-concierge-bell"></i> Manage service
+    </a>
+    <ul id="serviceDropdown" class="dropdown-content">
+        <li><a href="addservice.html"><i class="fas fa-plus-circle"></i> Add service</a></li>
+        <li><a href="updateservice.html"><i class="fas fa-edit"></i> Update service</a></li>
+        <li><a href="deleteservice.html"><i class="fas fa-trash-alt"></i> Delete service</a></li>
+        <li><a href="searchservice.html"><i class="fas fa-search"></i> Search service</a></li>
+        <li><a href="viewservice.php"><i class="fas fa-eye"></i> View service</a></li>
+    </ul>
+</li>
+
+            <!-- Manage Query Dropdown -->
+            <li>
+                <a href="#" onclick="toggleDropdown('queryDropdown')">
+                    <i class="fas fa-question-circle"></i> Manage Query
+                </a>
+                <ul id="queryDropdown" class="dropdown-content">
+                    <li>
+                        <a href="delete query.html">
+                            <i class="fas fa-trash"></i>&nbsp; Delete Query
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="search query.html">
+                            <i class="fas fa-search"></i>&nbsp; Search Query
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="viewquery.php">
+                            <i class="fas fa-eye"></i>&nbsp; View Query
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+      
+           <h1 style="text-align: center; margin: 0;">Staff Dashboard</h1>
+
+            <a href="logout.html" class="logout">Logout</a>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <i class="fas fa-utensils"></i>
+                <div class="number">120</div>
+                <div class="label">Total Menu Items</div>
+            </div>
+            <div class="card" style="background-color: black;">
+                <i class="fas fa-calendar-check"></i>
+                <div class="number">30</div>
+                <div class="label">Reservation Today</div>
+            </div>
+            <div class="card" style="background-color: darkblue;">
+                <i class="fas fa-comments"></i>
+                <div class="number">15</div>
+                <div class="label">Customer Feedback</div>
+            </div>
+            <div class="card" style="background-color: darkgreen;">
+                <i class="fas fa-plus-circle"></i>
+                <div class="number">+ Add</div>
+                <div class="label">New Menu Item</div>
+            </div>
+            <!-- New Cards -->
+            <div class="card" style="background-color: darkorange;">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="number">5</div>
+                <div class="label">Pending Reservations</div>
+            </div>
+            <div class="card" style="background-color: darkgoldenrod;">
+                <i class="fas fa-star"></i>
+                <div class="number">4.8</div>
+                <div class="label">Customer Ratings</div>
+            </div>
+           
+        </div>
+
+        
+
+    <script>
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId);
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
