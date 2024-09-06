@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Search - ABC Restaurant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container-sm {
+            max-width: 600px; 
+        }
+        .container {
+            margin-top: 15%;
+        }
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: maroon;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .btn-submit {
+            background-color: maroon;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-submit:hover {
+            background-color: maroon;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .result p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container container-sm">
+    <div class="card">
+        <div class="card-header">
+            Search Contact Details
+        </div>
+        <div class="card-body">
+            <form method="POST" action="searchqurey.php">
+                <div class="form-group">
+                    <label for="no">Enter Contact ID</label>
+                    <input type="number" class="form-control" id="no" name="no" placeholder="Enter contact ID" required>
+                </div>
+                <button type="submit" name="submit" class="btn btn-submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
