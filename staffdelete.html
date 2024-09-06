@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Restaurant - Delete Staff</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .delete-container {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .delete-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-danger {
+            background-color: maroon;
+            border-color: maroon;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn-danger:hover {
+            background-color: maroon;
+            border-color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <!-- Delete Staff Form -->
+    <div class="delete-container">
+        <h2 class="delete-title">Delete Staff</h2>
+        <form method="post" action="staffdelete.php">
+            <div class="form-group">
+                <label for="staff_id">Staff ID</label>
+                <input type="number" class="form-control" id="staff_id" name="staff_id" required>
+            </div>
+            <button type="submit" class="btn btn-danger btn-block">Delete</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
