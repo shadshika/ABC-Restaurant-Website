@@ -6,66 +6,89 @@
     <title>ABC Restaurant - Reservation</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* Custom CSS */
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .navbar-brand img {
-            width: 80px;
-        }
-
-        .reservation-section {
-            padding: 60px 0;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .reservation-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #333;
-        }
-
-        .reservation-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .reservation-form label {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .reservation-form input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        /* Navbar styling */
+        .navbar {
             margin-bottom: 20px;
         }
+        .navbar-brand img {
+            width: 50px;
+            height: auto;
+        }
+        .nav-link {
+            margin-right: 15px;
+        }
 
-        .btn-submit {
-            background-color: maroon;
-            color: #fff;
+        /* Reservation section styling */
+        .reservation-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+        .reservation-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            color: #343a40;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px 0px 15px 0px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #495057;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
             width: 100%;
             padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 15px 0px 15px 0px;
+            background-color: #f8f9fa;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        input[type="number"]:focus {
+            border-color: #80bdff;
+            outline: none;
+            background-color: #e9ecef;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: maroon;
+            color: #fff;
             border: none;
-            border-radius: 5px;
+            border-radius: 15px 0px 15px 0px;
+            font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: maroon;
         }
 
-        .btn-submit:hover {
-            background-color: darkred;
-        }
-
+        /* Footer styling */
         .footer {
             background-color: #343a40;
             color: #fff;
-            padding: 20px 0;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -124,7 +147,7 @@
     <section class="reservation-section">
         <div class="container">
             <h2 class="reservation-title">Make a Reservation</h2>
-            <form class="reservation-form" action="reservation.php" method="post">
+            <form action="reservation.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
                 <label for="email">Email:</label>
@@ -135,7 +158,7 @@
                 <input type="time" id="time" name="time" required>
                 <label for="people">Number of People:</label>
                 <input type="number" id="people" name="people" placeholder="Enter the number of people" required>
-                <button type="submit" class="btn-submit">Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     </section>
